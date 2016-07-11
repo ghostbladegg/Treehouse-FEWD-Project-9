@@ -43,3 +43,7 @@ config.codekit
 
 ### Git ###
 *.orig
+
+
+### Custom ###
+mockup
