@@ -1,0 +1,5 @@
+@mixin tablet {
+  @media screen and (min-width: $brk-tablet) {
+    @content;
+  }
+}

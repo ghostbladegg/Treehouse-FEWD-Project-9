@@ -1,0 +1,17 @@
+$primary-color: #7379BD;
+
+$header-bg: $primary-color;
+$nav-bg: lighten($primary-color, 10%);
+$nav-btn : $nav-bg;
+$nav-btn-hover: darken($nav-bg, 15%);
+$nav-btn-active: darken($nav-bg, 20%);
+
+$dashboard-bg: lighten($primary-color, 37%);
+$search-bg: lighten($dashboard-bg, 3%);
+$traffic-group-active: lighten($nav-bg, 20%);
+
+$social-stats-bg: lighten($primary-color, 30%);
+$social-stats-icon-bg: darken($social-stats-bg, 30%);
+$social-stats-color: darken($social-stats-bg, 20%);
+
+$brk-tablet: 900px;

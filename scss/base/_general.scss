@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "comfortaa", sans;
+}
+
+.nav-active:visited {
+  background: $nav-btn-hover;
+}
+.traffic-active {
+  background: $traffic-group-active;
+  border-radius: 5px;
+}
+
+svg {
+  height: 36px;
+  width: 36px;
+}
+
+a {
+  text-decoration: none;
+  &:link {
+    color: $nav-bg;
+  }
+  &:visited {
+    color: $nav-bg;
+  }
+  &:hover {
+    color: $nav-btn-hover;
+  }
+  &:active {
+    color: $nav-btn-active;
+  }
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  &:focus {
+    border-radius: 5px;
+    border: 1px solid black;
+    outline: none;
+    background: lighten($primary-color, 45%);
+  }
+}
+
+button {
+  padding: 15px;
+  background: $nav-btn;
+  border-radius: 5px;
+  margin: 10px 0;
+  outline: none;
+  border: 0;
+  &:hover {
+    background: $nav-btn-hover;
+  }
+  &:active {
+    background: $nav-btn-active;
+  }
+}
+
+#wrapper {
+  margin-top: 117px;
+  @include tablet {
+    margin-top: 61px;
+    margin-left: 56px;
+  }
+}

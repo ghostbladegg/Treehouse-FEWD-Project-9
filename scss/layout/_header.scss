@@ -1,0 +1,123 @@
+header {
+  background: $header-bg;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  h1 {
+    padding: 10px;
+  }
+}
+
+#profile {
+  display: flex;
+  @include tablet {
+    margin-right: 10px;
+  }
+}
+
+#profile-picture {
+  display: flex;
+  img {
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+    margin-right: 5px;
+  }
+  span {
+    display: none;
+    align-self: center; // save this for 768px+
+  }
+  @include tablet {
+    span {
+      display: initial;
+    }
+  }
+}
+
+#bell {
+  cursor: pointer;
+  border-right: 1px solid black;
+  padding-right: 10px;
+  position: relative;
+  align-self: center;
+}
+
+.bell-notification::after {
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  border: 5px solid green;
+  top: 0;
+  right: 7px;
+}
+
+#notification-container {
+  display: none;
+}
+
+#notification-content {
+  transition: opacity .2s;
+  position: absolute;
+  width: 350px;
+  background: $social-stats-bg;
+  border-radius: 5px;
+  padding: 10px;
+  top: 50px;
+  left: -250px;
+  display: flex;
+  flex-direction: column;
+li {
+  padding: 10px;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  &:last-child {
+    border: 0;
+  }
+}
+}
+
+#profile-picture {
+  padding-left: 10px;
+  align-self: center;
+}
+
+#main-nav {
+  background: $nav-bg;
+  display: flex;
+  flex-basis: 100%;
+  a {
+    flex: 1;
+    padding: 10px;
+    transition: flex .2s;
+    display: flex;
+    justify-content: center;
+    &:link {
+      background: $nav-bg;
+    }
+    &:hover {
+      flex: 2;
+      background: $nav-btn-hover;
+    }
+    &:active {
+      background: $nav-btn-active;
+    }
+  }
+  @include tablet {
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    top: 61px;
+    a {
+      align-items: center;
+      flex: .1;
+      &:hover {
+        flex: .2;
+      }
+    }
+  }
+} // #main-nav end

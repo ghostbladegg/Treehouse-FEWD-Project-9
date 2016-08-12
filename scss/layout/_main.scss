@@ -1,0 +1,380 @@
+#dashboard {
+  background: $dashboard-bg;
+  display: flex;
+  flex-direction: column;
+  > div {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+    h2 {
+      padding: 10px;
+    }
+    &:first-child {
+      padding: 0;
+      border: 0;
+    }
+    &:nth-child(2) {
+      border: 0;
+    }
+    &:nth-child(3) {
+      border-top: 0;
+    }
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+} // #dashboard end
+
+#dashboard-header {
+  // padding: 0;
+  h2 {
+  display: none;
+  }
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      flex: 1;
+      display: initial;
+      align-self: center;
+      background: $dashboard-bg;
+    }
+    #search-container {
+      flex: 4;
+      background: $search-bg;
+    }
+  }
+}
+
+#alert {
+  margin: 10px;
+  padding: 10px;
+  background: $nav-bg;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    &:link {
+      color: $nav-btn-active;
+    }
+    &:visited {
+      color: $nav-btn-active;
+    }
+    &:hover {
+      color: $nav-btn-hover;
+    }
+    &:active {
+      color: $nav-btn-active;
+    }
+  }
+} // #alert end
+
+#search {
+  font-style: italic;
+  margin: 10px;
+  width: 50%;
+  @include tablet {
+  float: right;
+  }
+
+} // #search end
+
+#traffic {
+
+} // #traffic end
+
+#traffic-group {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  a {
+    padding: 10px;
+    cursor: pointer;
+    color: $nav-btn-active;
+    &:hover {
+      background-color: $traffic-group-active;
+      border-radius: 5px;
+    }
+  }
+} // #traffic-group end
+
+#traffic-chart {
+  padding: 10px;
+} // #traffic-chart
+
+.column-2 {
+  div:first-child {
+    border-bottom: 1px solid #ccc;
+  }
+  div:last-child {
+    border-top: 1px solid #ccc;
+  }
+  @include tablet {
+      display: flex;
+      div:first-child {
+        width: 50%;
+        border: 0;
+        border-right: 1px solid #ccc;
+      }
+      div:last-child {
+        width: 50%;
+        border: 0;
+        border-left: 1px solid #ccc;
+      }
+  }
+} // column-2 end
+
+#social-lists {
+  display: flex;
+  flex-direction: column;
+  li {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: $social-stats-bg;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    div:first-child {
+      width: 60px;
+      height: 60px;
+      margin: auto 0;
+      fill: white;
+      background: $social-stats-icon-bg;
+      border-radius: 50%;
+      position: relative;
+      svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+    div:last-child {
+      display: flex;
+      flex-direction: column;
+      span:first-child {
+        font-weight: bold;
+        color: $social-stats-color;
+      }
+      span:last-child {
+        font-size: 2em;
+      }
+    }
+  }
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-around;
+    li {
+      flex: 1;
+    }
+  }
+} // #social-lists end
+
+#member-lists {
+  display: flex;
+  flex-direction: column;
+  li {
+    // border-radius: 5px;
+    border-bottom: 1px solid #ccc;
+    // background: $social-stats-bg;
+    display: flex;
+    padding: 10px;
+    // margin: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &:last-child {
+      border-bottom: initial;
+    }
+    img {
+      align-self: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+    div {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    span {
+      align-self: center;
+    }
+  }
+  @include tablet {
+    li {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+} // #member-lists end
+
+#activity-lists {
+  display: flex;
+  flex-direction: column;
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    &:last-child {
+      border-bottom: initial;
+    }
+    img {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      > span {
+        padding: 10px;
+      }
+    }
+    a {
+      font-size: 1.5em;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  @include tablet {
+    li {
+      display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+    }
+  }
+} // #activity-lists end
+
+#message-users {
+  display: flex;
+  flex-direction: column;
+  input {
+    margin: 5px 0;
+  }
+  textarea {
+    margin: 5px 0;
+    resize: vertical;
+    height: 200px;
+  }
+  > div {
+    justify-content: space-between;
+    background: $nav-btn;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    a {
+      cursor: pointer;
+    }
+  }
+  @include tablet {
+    padding: 10px;
+  }
+} // #message-users end
+
+#settings {
+  display: flex;
+  flex-direction: column;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  select {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    height: 50px;
+    background: $social-stats-bg;
+    margin-bottom: 10px;
+  }
+  @include tablet {
+    padding: 10px;
+  }
+} // #settings end
+
+
+.switch {
+	position: relative;
+	display: block;
+	vertical-align: top;
+	width: 100px;
+	height: 30px;
+	padding: 3px;
+	margin: 0 10px 10px 0;
+	border-radius: 18px;
+	cursor: pointer;
+}
+.switch-input {
+	display: none;
+}
+.switch-label {
+	position: relative;
+	display: block;
+	height: inherit;
+	font-size: 10px;
+	background: #eceeef;
+	border-radius: inherit;
+}
+.switch-label::before, .switch-label::after {
+	position: absolute;
+	top: 50%;
+	margin-top: -.5em;
+	line-height: 1;
+	transition: inherit;
+}
+.switch-label::before {
+	content: attr(data-off);
+	right: 11px;
+	color: #ccc;
+}
+.switch-label::after {
+	content: attr(data-on);
+	left: 11px;
+	color: white;
+}
+.switch-input:checked ~ .switch-label {
+	background: $nav-btn-active;
+}
+.switch-input:checked ~ .switch-label:before {
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label:after {
+	opacity: 1;
+}
+.switch-handle {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 28px;
+	height: 28px;
+	background: white;
+	border-radius: 100%;
+}
+.switch-handle:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -6px 0 0 -6px;
+	width: 12px;
+	height: 12px;
+}
+.switch-input:checked ~ .switch-handle {
+	left: 68px;
+}
+
+.switch-label, .switch-handle {
+	transition: All 0.3s ease;
+}
