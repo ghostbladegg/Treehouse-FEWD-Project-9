@@ -109,6 +109,14 @@
     		c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
     </g>
   </symbol>
+  <symbol id="comment-icon" viewBox="0 0 24 24">
+    <path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+  </symbol>
+  <symbol id="reply-icon" viewBox="0 0 24 24">
+    <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+  </symbol>
 </svg>
 
 <!-- <svg><use xlink:href="#facebook"></svg> -->

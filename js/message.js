@@ -16,17 +16,17 @@ function emptyCheck() {
   noUser.style.display = "none";
   noContent.style.display = "none";
   sendConfirmation.style.display = "none";
-  if ( messageUser.value == 0 && messageContent.value == 0 ) {
+  if ( messageUser.value === "" && messageContent.value === "" ) {
     noUser.style.display = "flex";
     noContent.style.display = "flex";
-  } else if ( messageUser.value == 0 ) {
+  } else if ( messageUser.value === "" ) {
     noUser.style.display = "flex";
-  } else if ( messageContent.value == 0 ) {
+  } else if ( messageContent.value === "" ) {
     noContent.style.display = "flex";
   } else {
     sendConfirmation.style.display = "flex";
-    messageUser.value = null;
-    messageContent.value = null;
+    messageUser.value = "";
+    messageContent.value = "";
   }
 }
 
